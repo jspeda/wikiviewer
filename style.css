@@ -1,0 +1,35 @@
+body {
+  background-color: #d3d3d3;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.field {
+  margin: auto;
+  padding-top: 35px;
+}
+
+.search {
+  border: none;
+  border-color: transparent;
+  background-color:rgba(0,0,0,0);
+  outline: none;
+  width: 150px;
+  height: 90px;
+  margin: auto;
+  font-size: 50px;
+  color: #bf202d;
+}
+.search:focus {
+  width: 450px;
+}
+
+button {
+  margin: auto;
+  border: none;
+  border-color: transparent;
+  outline: none;
+}
