@@ -23,9 +23,7 @@ body {
   font-size: 50px;
   color: #bf202d;
 }
-.search:focus {
-  width: 450px;
-}
+
 
 button {
   margin: auto;
