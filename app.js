@@ -30,15 +30,24 @@ $('#text_val').click(function() {
   //   function(json) {
   //     console.log(json.parse.text['*']);
   //   });
-  // $.getJSON("https://en.wikipedia.org/w/api.php?action=opensearch&search="+ textValue + "&limit=5&format=json&callback=?",
-  //   function(json) {
-  //     console.log(json);
-  //   });
 
   // this one works
   $.getJSON("https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch="+ textValue + "&format=json&callback=?",
     function(json) {
-      console.log(json.query.search[0]);
+      var search = json.query.search;
+      console.log(json.query.search);
+      for (var i = 0; i < search.length; i++) {
+        var title = $("<div class='result' id='title'>" + search[i].title + "</div>");
+        var snippet = $("<div class='result' id='snippet'>" + search[i].snippet + "</div>");
+        $('.results-container').append(title);
+        for (var j = 0; j < search.length; j++) {
+          $('.results-container').append(snippet);
+        }
+      }
+    // $('#article-name').html(json.query.search[0].title);
+    // $('#article-snippet').html(json.query.search[0].snippet);
+    // $('#article-name-2').html(json.query.search[1].title);
+    // $('#article-snippet-2').html(json.query.search[1].snippet);
     });
   }
 });

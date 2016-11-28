@@ -2,9 +2,14 @@ body {
   background-color: #d3d3d3;
 }
 
-.container {
+.search-container {
   display: flex;
   flex-direction: row;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .field {
@@ -22,6 +27,10 @@ body {
   margin: auto;
   font-size: 50px;
   color: #bf202d;
+}
+
+#title {
+  font-weight: bold;
 }
 
 
