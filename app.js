@@ -33,7 +33,8 @@ $('#text_val').click(function() {
       console.log(json.query.search);
       // loop through json to populate page with content
       for (var i = 0; i < search.length; i++) {
-        var title = $("<div class='result' id='title'><a href=https://en.wikipedia.org/wiki/" + search[i].title + ">" + search[i].title + "</a></div>");
+        var urlTitle = search[i].title.replace(/ /g, "_");
+        var title = $("<div class='result' id='title'><a href=https://en.wikipedia.org/wiki/" + urlTitle + ">" + search[i].title + "</a></div>");
         var snippet = $("<div class='result' id='snippet'>" + search[i].snippet + "</div>");
         $('.results-container').append(title);
         for (var j = 0; j < search.length; j++) {
