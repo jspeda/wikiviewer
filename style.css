@@ -1,12 +1,18 @@
 body {
-  background-color: #f7f6d2;
+  background-color: #729ea1;
 }
 
 .title {
   margin-top: 25px;
   text-align: center;
   font-size: 60px;
-  color: #3d3d3d;
+  color: #dfbe99;
+}
+
+.random {
+  text-align: center;
+  font-size: 15px;
+  color: #ec9192;
 }
 
 .search-container {
@@ -17,6 +23,7 @@ body {
 .results-container {
   display: flex;
   flex-direction: column;
+  color: #ec9192;
 }
 
 .field {
@@ -33,13 +40,23 @@ body {
   height: 90px;
   margin: auto;
   font-size: 50px;
-  color: #bf202d;
+  color: #dfbe99;
 }
 
 #title {
   font-weight: bold;
+  color: #b5bd89;
 }
 
+a {
+  text-decoration: none;
+  color: #dfbe99;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #db5375;
+}
 
 button {
   border: none;
