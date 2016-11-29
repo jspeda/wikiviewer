@@ -1,5 +1,5 @@
 $(document).ready(function(){
-$('form').on('submit', function() {
+$('form').on('submit', function(event) {
   event.preventDefault();
   var textValue = $('input').val();
   if (textValue === '') {
