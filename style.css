@@ -57,15 +57,3 @@ a:hover {
   text-decoration: underline;
   color: #db5375;
 }
-
-button {
-  position: relative;
-  border: none;
-  border-color: transparent;
-  outline: none;
-  height: 80px;
-  padding: 6px 15px;
-  left: -8px;
-  margin-left: 10px;
-  padding-bottom: 10px;
-}

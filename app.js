@@ -1,10 +1,7 @@
 $(document).ready(function(){
-
-var textValue;
-
 $('form').on('submit', function() {
   event.preventDefault();
-  textValue = $('input').val();
+  var textValue = $('input').val();
   if (textValue === '') {
     console.log('Enter text!!');
   }
