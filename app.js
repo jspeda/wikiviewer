@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 var textValue;
 
-$('#text_val').click(function() {
+$('form').on('submit', function() {
   event.preventDefault();
   textValue = $('input').val();
   if (textValue === '') {
@@ -29,5 +29,4 @@ $('#text_val').click(function() {
     });
   }
 });
-
 });
