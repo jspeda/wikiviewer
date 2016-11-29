@@ -23,7 +23,7 @@ body {
 .results-container {
   display: flex;
   flex-direction: column;
-  color: #ec9192;
+  color: #edf3ff;
 }
 
 .field {
