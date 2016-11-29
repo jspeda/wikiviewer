@@ -15,7 +15,7 @@ $('form').on('submit', function(event) {
       console.log(json.query.search);
       // loop through json to populate page with content
       for (var i = 0; i < search.length; i++) {
-        var urlTitle = search[i].title.replace(/ /g, "_");
+        var urlTitle = search[i].title.replace(/\s/g, "_");
         var title = $("<div class='result result-title pure-u-1-2' id='title'><a href=https://en.wikipedia.org/wiki/" + urlTitle + ">" + search[i].title + "</a></div>");
         var snippet = $("<div class='result result-snippet pure-u-1' id='snippet'>" + search[i].snippet + "</div><br />");
         $('.results-container').append(title);
