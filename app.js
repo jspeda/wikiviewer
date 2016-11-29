@@ -26,10 +26,6 @@ $('#text_val').click(function() {
           $('.results-container').append(snippet);
         }
       }
-    // $('#article-name').html(json.query.search[0].title);
-    // $('#article-snippet').html(json.query.search[0].snippet);
-    // $('#article-name-2').html(json.query.search[1].title);
-    // $('#article-snippet-2').html(json.query.search[1].snippet);
     });
   }
 });
