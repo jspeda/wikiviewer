@@ -1,16 +1,14 @@
 $(document).ready(function(){
 $('form').on('keyup', function(event) {
-  event.preventDefault();
   let textValue = $('input').val();
   if (textValue === '') {
-    console.log('Enter text!!');
+    $('.results-container').html('');
   }
   else {
     setTimeout(getResults, 400);
     function getResults() {
       $('.results-title-container').html('');
       $('.results-container').html('');
-      console.log(textValue);
       $.getJSON(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=
       ${textValue}&format=json&callback=?`,
       function(json) {
