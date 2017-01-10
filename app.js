@@ -1,5 +1,5 @@
 $(document).ready(function(){
-$('form').on('submit', function(event) {
+$('form').on('keyup', function(event) {
   event.preventDefault();
   var textValue = $('input').val();
   if (textValue === '') {
@@ -14,15 +14,12 @@ $('form').on('submit', function(event) {
       var search = json.query.search;
       console.log(json.query.search);
       // loop through json to populate page with content
-      for (var i = 0; i < search.length; i++) {
-        var urlTitle = search[i].title.replace(/\s/g, "_");
-        var title = $("<div class='result result-title pure-u-1-2' id='title'><a href=https://en.wikipedia.org/wiki/" + urlTitle + ">" + search[i].title + "</a></div>");
-        var snippet = $("<div class='result result-snippet pure-u-1' id='snippet'>" + search[i].snippet + "</div><br />");
-        $('.results-container').append(title);
-        for (var j = 0; j < search.length; j++) {
-          $('.results-container').append(snippet);
-        }
-      }
+      search.map(function(result) {
+        const urlTitle = result.title.replace(/\s/g, "_");
+        const title = $(`<div class='result result-title pure-u-1-2' id='title'><a href=https://en.wikipedia.org/wiki/${urlTitle}>${result.title}</a></div>`);
+        const snippet = $(`<div class='result result-snippet pure-u-1' id='snippet'>${result.snippet}</div><br />`);
+        return $('.results-container').append(title).append(snippet);
+      });
     });
   }
 });
